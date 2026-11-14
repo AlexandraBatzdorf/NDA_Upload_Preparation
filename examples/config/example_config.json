@@ -1,0 +1,13 @@
+{
+  "constant_fields": {
+    "image_description": "Example BIDS-formatted MRI data",
+    "scan_type": "MR structural (T1)",
+    "scan_object": "Live",
+    "image_file_format": "NIFTI",
+    "image_modality": "MRI"
+  },
+  "sidecar_field_map": {
+    "SoftwareVersions": "scanner_software_versions_pd",
+    "DeviceSerialNumber": "deviceserialnumber"
+  }
+}

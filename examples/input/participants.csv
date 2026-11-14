@@ -1,0 +1,4 @@
+source_subject_id,subjectkey,sex,date_of_birth,exclude
+M00012345,NDAR_INV000000001,F,1987-04-12,false
+M11154321,NDAR_INV000000002,M,1979-09-03,false
+M00099999,NDAR_INV000000003,F,1993-01-25,true

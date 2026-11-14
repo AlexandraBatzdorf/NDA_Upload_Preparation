@@ -1,0 +1,14 @@
+[
+  {
+    "path": "sub-M00099999/ses-01/anat/sub-M00099999_ses-01_T1w.nii.gz",
+    "name": "sub-M00099999_ses-01_T1w.nii.gz",
+    "size": 65,
+    "md5sum": "2a1a7ad36d8c6b1b0f41bfad455a4add"
+  },
+  {
+    "path": "sub-M00099999/ses-01/anat/sub-M00099999_ses-01_T1w.json",
+    "name": "sub-M00099999_ses-01_T1w.json",
+    "size": 123,
+    "md5sum": "b48740d1df0a5880ccaa01ff5ecd080e"
+  }
+]
