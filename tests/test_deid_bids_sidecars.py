@@ -9,7 +9,7 @@ from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from redact_bids_sidecars import redact_file, DEFAULT_FIELDS_TO_REMOVE, DEFAULT_SITE_PATTERN
+from deid_bids_sidecars import redact_file, DEFAULT_FIELDS_TO_REMOVE, DEFAULT_SITE_PATTERN
 
 
 class RedactSidecarTests(unittest.TestCase):
