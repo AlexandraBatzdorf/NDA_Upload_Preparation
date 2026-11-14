@@ -132,11 +132,11 @@ python3 src/deid_bids_sidecars.py /path/to/a/working-copy-of-bids --write
 
 By default, the script removes these top-level JSON keys when present: `ProcedureStepDescription`, `InstitutionAddress`, `InstitutionalDepartmentName`, `PatientID`, `PatientName`, `AccessionNumber`, `ReferringPhysicianName`, and `OperatorsName`. If `InstitutionName` is present, the script replaces it with a site label inferred from the path using a configurable regular expression. If no site label is found, it removes `InstitutionName` rather than leaving the original value in place.
 
-The default site pattern expects a path component containing `sub-` followed by two to eight letters and three digits. Override it with `--site-regex` if your anonymized BIDS labels use another convention. The expression must include a named `site` capture group, for example:
+The default site pattern expects a path component containing `sub-` followed by the letter `M` and three digits (site key) and an optional alphanumeric suffix (e.g., `sub-M000xxxxx`, where `M000` is a site-specific identifier). Override it with `--site-regex` if your anonymized BIDS labels use another convention. The expression must include a named `site` capture group, for example:
 
 ```bash
 python3 src/deid_bids_sidecars.py /path/to/working-copy \
-  --site-regex 'sub-(?P<site>[A-Z]{2}\d{4})' --write
+  --site-regex 'sub-(?P<site>M\d{3})[A-Za-z0-9]*' --write
 ```
 
 Additional top-level keys can be removed with repeated `--remove-field KEY` options. Run this only against a working copy and separately review filenames, directory labels, NIfTI/DICOM headers, other metadata files, dates, free text, and all applicable institutional requirements.
